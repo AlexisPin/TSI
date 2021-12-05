@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\tools\format\mesh_io_obj.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\tools\format\mesh_io_off.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\tools\glhelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\tools\mat4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\tools\mesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\tools\tga.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\tools\triangle_index.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\tools\vec2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\tools\vec3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\tools\vertex_opengl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\tools\format\mesh_io_obj.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\tools\format\mesh_io_off.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\tools\glhelper.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\tools\image.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\tools\mat4.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\tools\mesh.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\tools\stb_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\tools\triangle_index.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\tools\vec2.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\tools\vec3.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\tools\vertex_opengl.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\tools\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{38954EA3-42FC-3CC2-8A8C-6768D37B845F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5AE3FF98-18B7-30C4-9376-D83870757A61}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
