@@ -99,7 +99,7 @@ static void display_callback()
   if (translation_x >= 1) {
       translation_x = -1;
   }
-  printf("%d\n", translation_x);
+
   //Changement de buffer d'affichage pour eviter un effet de scintillement
   glutSwapBuffers();
 }
