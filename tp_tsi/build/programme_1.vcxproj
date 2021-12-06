@@ -317,7 +317,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D:\programme_1\src\main.cpp" />
+    <ClCompile Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\programme_1\src\main.cpp" />
     <None Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\programme_1\src\shader.frag">
     </None>
     <None Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\programme_1\src\shader.vert">

@@ -317,6 +317,13 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\programme_2\src\main.cpp" />
+    <None Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\programme_2\src\shader.frag">
+    </None>
+    <None Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\programme_2\src\shader.vert">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="A:\CPE Lyon\4ETI\TSI\tp_tsi_synthese\tp_tsi\build\ZERO_CHECK.vcxproj">
       <Project>{7929A31F-64CC-3818-8B8C-1E1A8CE99EBE}</Project>
       <Name>ZERO_CHECK</Name>
@@ -335,13 +342,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{0584B443-19A5-3836-B980-781ECF440C93}</Project>
       <Name>tools</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="D:\programme_2\src\main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="D:\programme_2\src\shader.frag" />
-    <None Include="D:\programme_2\src\shader.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

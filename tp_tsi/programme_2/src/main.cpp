@@ -31,6 +31,9 @@
  *
  *
  \*****************************************************************************/
+float translation_x = 0.0f;
+float translation_y = 0.0f;
+float translation_z = 0.0f;
 
 //identifiant du shader
 GLuint shader_program_id;
@@ -83,9 +86,7 @@ static void display_callback()
   glClearColor(0.5f, 0.6f, 0.9f, 1.0f); CHECK_GL_ERROR();
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); CHECK_GL_ERROR();
 
-  float translation_x=0.0f;
-  float translation_y=0.0f;
-  float translation_z=0.0f;
+
 
   GLint loc_translation = glGetUniformLocation(shader_program_id, "translation"); CHECK_GL_ERROR();
   if (loc_translation == -1) std::cerr << "Pas de variable uniforme : translation" << std::endl;
@@ -93,6 +94,12 @@ static void display_callback()
 
   glDrawArrays(GL_TRIANGLES, 0, 3); CHECK_GL_ERROR();
 
+  translation_x +=0.001;
+
+  if (translation_x >= 1) {
+      translation_x = -1;
+  }
+  printf("%d\n", translation_x);
   //Changement de buffer d'affichage pour eviter un effet de scintillement
   glutSwapBuffers();
 }
@@ -124,6 +131,7 @@ static void timer_callback(int)
   //demande de rappel de cette fonction dans 25ms
   glutTimerFunc(25, timer_callback, 0);
 
+  
   //reactualisation de l'affichage
   glutPostRedisplay();
 }
