@@ -85,10 +85,10 @@ static void init()
   vec3 c3=vec3(1.0f,1.0f,0.0f);
 
   //texture du sommet
-  vec2 t0=vec2(0.0f,0.0f);
+  vec2 t0=vec2(0.0f,-1.0f);
   vec2 t1=vec2(1.0f,0.0f);
   vec2 t2=vec2(0.0f,1.0f);
-  vec2 t3=vec2(1.0f,1.0f);
+  vec2 t3=vec2(2.0f,1.0f);
 
   vertex_opengl v0=vertex_opengl(p0,n0,c0,t0);
   vertex_opengl v1=vertex_opengl(p1,n1,c1,t1);
@@ -157,7 +157,7 @@ static void init()
 
 
   // Chargement d'une texture (seul les textures tga sont supportes)
-  Image  *image = image_load_tga("data/unicorn.tga");
+  Image  *image = image_load_tga("data/stegosaurus.tga");
   if (image) //verification que l'image est bien chargee
   {
 
@@ -169,7 +169,7 @@ static void init()
     glBindTexture(GL_TEXTURE_2D, texture_id); CHECK_GL_ERROR();
 
     //Parametres de la texture
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT); CHECK_GL_ERROR();
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE); CHECK_GL_ERROR();
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT); CHECK_GL_ERROR();
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); CHECK_GL_ERROR();
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR); CHECK_GL_ERROR();
