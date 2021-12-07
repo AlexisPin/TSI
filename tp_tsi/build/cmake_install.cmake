@@ -1,8 +1,8 @@
-# Install script for directory: A:/CPE Lyon/4ETI/TSI/tp_tsi_synthese/tp_tsi
+# Install script for directory: /fs03/share/users/alexis.pincemin/home/TSI/tp_tsi
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/openGL_CPE")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -27,6 +27,11 @@ if(NOT CMAKE_INSTALL_COMPONENT)
   endif()
 endif()
 
+# Install shared libraries without execute permission?
+if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
+  set(CMAKE_INSTALL_SO_NO_EXE "1")
+endif()
+
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
@@ -34,9 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("A:/CPE Lyon/4ETI/TSI/tp_tsi_synthese/tp_tsi/build/extern/glew/cmake_install.cmake")
-  include("A:/CPE Lyon/4ETI/TSI/tp_tsi_synthese/tp_tsi/build/extern/freeglut/cmake_install.cmake")
-  include("A:/CPE Lyon/4ETI/TSI/tp_tsi_synthese/tp_tsi/build/tools/cmake_install.cmake")
+  include("/fs03/share/users/alexis.pincemin/home/TSI/tp_tsi/build/tools/cmake_install.cmake")
 
 endif()
 
@@ -48,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "A:/CPE Lyon/4ETI/TSI/tp_tsi_synthese/tp_tsi/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/fs03/share/users/alexis.pincemin/home/TSI/tp_tsi/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
