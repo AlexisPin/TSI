@@ -63,22 +63,28 @@ mat4 projection;
 static void init()
 {
 
-  //coordonnees geometriques des sommets
-  vec3 p0=vec3(0.0f,0.0f,0.0f);
-  vec3 p1=vec3(1.0f,0.0f,0.0f);
-  vec3 p2=vec3(0.0f,1.0f,0.0f);
-
-  //normales pour chaque sommet
-  vec3 n0=vec3(0.0f,0.0f,1.0f);
-  vec3 n1=vec3(0.0f,0.0f,1.0f);
-  vec3 n2=vec3(0.0f,0.0f,1.0f);
-
-  //tableau entrelacant coordonnees-normales
-  vec3 geometrie[]={p0,n0 , p1,n1 , p2,n2};
+ //coordonnees geometriques des sommets
+vec3 p0=vec3(0.0f,0.0f,0.0f);
+vec3 p1=vec3(1.0f,0.0f,0.0f);
+vec3 p2=vec3(0.0f,1.0f,0.0f);
+vec3 p3=vec3(0.8f,0.8f,0.5f);
+//normales pour chaque sommet
+vec3 n0=vec3(0.0f,0.0f,1.0f);
+vec3 n1=vec3(-0.25f,-0.25f,0.8535f);
+vec3 n2=vec3(-0.25f,-0.25f,0.8535f);
+vec3 n3=vec3(-0.5f,-0.5f,0.707);
+//couleur pour chaque sommet
+vec3 c0=vec3(0.0f,0.0f,0.0f);
+vec3 c1=vec3(1.0f,0.0f,0.0f);
+vec3 c2=vec3(0.0f,1.0f,0.0f);
+vec3 c3=vec3(1.0f,1.0f,0.0f);
+//tableau entrelacant coordonnees-normales
+vec3 geometrie[]={p0,n0,c0 , p1,n1,c1 , p2,n2,c2 , p3,n3,c3};
 
   //indice des triangles
   triangle_index tri0=triangle_index(0,1,2);
-  triangle_index index[]={tri0};
+  triangle_index tri1=triangle_index(1,3,2);
+  triangle_index index[]={tri0,tri1};
 
   //attribution d'une liste d'état (1 indique la création d'une seule liste)
   glGenVertexArrays(1, &vao);
@@ -94,12 +100,17 @@ static void init()
   // Active l'utilisation des données de positions (le 0 correspond à la location dans le vertex shader)
   glEnableVertexAttribArray(0); CHECK_GL_ERROR();
   // Indique comment le buffer courant (dernier vbo "bindé") est utilisé pour les positions des sommets
-  glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 2*sizeof(vec3), 0); CHECK_GL_ERROR();
+  glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3*sizeof(vec3), 0); CHECK_GL_ERROR();
 
   // Active l'utilisation des données de normales (le 1 correspond à la location dans le vertex shader)
   glEnableVertexAttribArray(1); CHECK_GL_ERROR();
   // Indique comment le buffer courant (dernier vbo "bindé") est utilisé pour les normales des sommets
-  glVertexAttribPointer(1, 3, GL_FLOAT, GL_TRUE, 2*sizeof(vec3), (void*)sizeof(vec3)); CHECK_GL_ERROR();
+  glVertexAttribPointer(1, 3, GL_FLOAT, GL_TRUE, 3*sizeof(vec3), (void*)sizeof(vec3)); CHECK_GL_ERROR();
+
+   // Active l'utilisation des données de normales (le 1 correspond à la location dans le vertex shader)
+  glEnableVertexAttribArray(2); CHECK_GL_ERROR();
+  // Indique comment le buffer courant (dernier vbo "bindé") est utilisé pour les normales des sommets
+  glVertexAttribPointer(2, 3, GL_FLOAT, GL_TRUE, 3*sizeof(vec3), (void*)(2*sizeof(vec3))); CHECK_GL_ERROR();
 
   //attribution d'un autre buffer de donnees
   glGenBuffers(1,&vboi); CHECK_GL_ERROR();
@@ -139,7 +150,7 @@ static void display_callback()
   if (loc_translation == -1) std::cerr << "Pas de variable uniforme : translation" << std::endl;
   glUniform4f(loc_translation,translation_x,translation_y,translation_z,0.0f); CHECK_GL_ERROR();
 
-  glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, 0); CHECK_GL_ERROR();
+  glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0); CHECK_GL_ERROR();
 
   //Changement de buffer d'affichage pour eviter un effet de scintillement
   glutSwapBuffers();
